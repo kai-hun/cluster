@@ -10,6 +10,7 @@ int enable = 11;
 void setup() {
   Serial.begin(9600);
   servo.attach(9);
+  servo.write(45);
   pinMode(PinA, OUTPUT);
   pinMode(PinB, OUTPUT);
   pinMode(enable, OUTPUT);

@@ -23,6 +23,6 @@
    ---|---|---|---
    FORWARD | LOW | HIGH | 45
    BACKWARD | LOW | HIGH | 45
-   RIGHT | X | X | 80
+   RIGHT | X | X | 75
    LEFT | X | X | 0
    STOP | LOW | LOW | 45

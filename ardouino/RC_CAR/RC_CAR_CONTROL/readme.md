@@ -1,9 +1,12 @@
-# 순서도
+# 흐름도
+ * flowchart
+   
    ![image](https://github.com/kai-hun/cluster/assets/68891654/8b6c7043-3593-4a9c-876c-d1be1ea17c03)
 
 
 # H-bridge
  * circuit diagram
+   
    ![image](https://github.com/kai-hun/cluster/assets/68891654/ff5dba77-ae5b-4501-b1b2-64f37e2f81cb)
 
    Q1,Q4를 통해 모터에 +전류가 흐르게 되면 모터가 정방향 회전

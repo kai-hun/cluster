@@ -27,7 +27,7 @@ void Backward(){
   digitalWrite(PinB, LOW);
 }
 void Right(){
-  servo.write(80);
+  servo.write(75);
 }
 void Left(){
   servo.write(0);

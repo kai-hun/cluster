@@ -16,7 +16,7 @@
    
  * table
    
-   DIRECTION | PinA | PinB | servo
+   DIRECTION | motor1PinA | motor1PinB | servo
    ---|---|---|---
    FORWARD | LOW | HIGH | 45
    BACKWARD | LOW | HIGH | 45

@@ -1,9 +1,18 @@
 # 순서도
-   ![image](https://github.com/kai-hun/cluster/assets/68891654/91b46d5b-0ddb-4319-bfba-db25c4ff589d)
+   ![image](https://github.com/kai-hun/cluster/assets/68891654/8b6c7043-3593-4a9c-876c-d1be1ea17c03)
+
+
 # H-bridge
  * circuit diagram
-   ![image](https://github.com/kai-hun/cluster/assets/68891654/77391cc6-849d-4ac4-8d57-dad69417ed07)
-   전류가 Q3,Q2를 통해 모터에 +전압
+   ![image](https://github.com/kai-hun/cluster/assets/68891654/ff5dba77-ae5b-4501-b1b2-64f37e2f81cb)
+
+   Q1,Q4를 통해 모터에 +전류가 흐르게 되면 모터가 정방향 회전
+   
+   Q3,Q2를 통해 모터에 -전류가 흐르게 되면 모터가 역방향 회전
+   
+   모터에 전류가 흐르지 않으면 정지
+
+   ---
    
  * table
    

@@ -7,11 +7,15 @@
 2. 키트 조립하기
 
 # CONNECT
+* SD 카드
 * HDMI
 * 마우스
 * 키보드
 * 와이파이 동글
 * 파워
+* 마이크로 5핀
+
+![img](https://github.com/kai-hun/cluster/assets/68891654/cfb7ebb1-1f32-49f8-9362-c8ddef5d6798)
 
 # SYSTEM CONFIGURATION
 1. 언어 - ENGLISH
@@ -34,48 +38,57 @@
 
 # Camera(CSI)
 1. 카메라 설치
-
-*https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide#id-.JetsonNano2GBDeveloperKitUserGuidevbatuu_v1.0-Camera*
+ 
+   *https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide#id-.JetsonNano2GBDeveloperKitUserGuidevbatuu_v1.0-Camera*
 
 2. 터미널 실행
+3. 코드 입력
 
-   1. `git clone https://github.com/jetsonhacks/CSI-Camera.git`
+   ```shell
+   git clone https://github.com/jetsonhacks/CSI-Camera.git
+   
+   ls
+   
+   CSI-Camera
+   
+   ls
+   
+   simple_camera.py
+   ```
 
-   2. `ls`
+##### *캡쳐하기*
 
-   3. `CSI-Camera`
+   *https://developer.nvidia.com/embedded/learn/tutorials/first-picture-csi-usb-camera#CameraGuide-USBCamera.1*
 
-   4. `ls`
-
-   5. `simple_camera.py`
-
-### *캡쳐하기*
-
-*https://developer.nvidia.com/embedded/learn/tutorials/first-picture-csi-usb-camera#CameraGuide-USBCamera.1*
-
-# HEADLESS MODE
+# JupyterLab
 1. Windows PowerShell 관리자 권한으로 실행
 2. docker 설치
 
-    1. `cd ..`
+   ```shell
+   cd ..
 
-    2. `cd ..`
+   cd ..
+
+   ssh <>@192.168.55.1
+
+   mkdir -p ~/nvdli-data
+
+   echo "sudo docker run --runtime nvidia -it --rm --network host \
+   --volume ~/nvdli-data:/nvdli-nano/data \
+   --device /dev/video0 \
+   nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh
+
+   chmod +x docker_dli_run.sh
+
+   ./docker_dli_run.sh
+   ```
   
-    3. `ssh <>@192.168.55.1`
+3. *http://192.168.0.204:8888* 접속 (password : dlinano)
+4. Hello camera 예제 실습
+ 
+   1. ㄴㅇㄹ
+   2. 
 
-    4. `mkdir -p ~/nvdli-data`
+5. classification 예제 실습
+     
 
-    5. `echo "sudo docker run --runtime nvidia -it --rm --network host \
-    --volume ~/nvdli-data:/nvdli-nano/data \
-    --device /dev/video0 \
-    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh`
-    
-    6. `chmod +x docker_dli_run.sh`
-
-    7. `./docker_dli_run.sh`
-  
-4. JupyterLab 실행
-   
-    1) *http://192.168.0.204:8888* 접속 (password : dlinano)
-
-    2) 

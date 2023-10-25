@@ -85,9 +85,6 @@
   
 3. *http://192.168.0.204:8888* 접속 (password : dlinano)
 4. Hello camera 예제 실습
- 
-   1. ㄴㅇㄹ
-   2. 
 
 5. classification 예제 실습
      

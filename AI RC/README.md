@@ -1,3 +1,9 @@
+
+![image](https://github.com/kai-hun/cluster/assets/68891654/4f516c06-9e7b-4112-912b-7dcbf267ba7a)
+
+![image](https://github.com/kai-hun/cluster/assets/68891654/dd8412f4-1013-40cf-843a-61a64c2e581c)
+
+
 `sudo sh install.sh`는 Linux 또는 Unix 기반 시스템에서 사용되는 명령어입니다. 이 명령어는 다음과 같은 역할을 합니다:
 
 1. `sudo`: "superuser do"의 약자로, 슈퍼 유저 또는 관리자 권한으로 명령을 실행하도록 허용합니다. 일반 사용자가 시스템의 중요한 부분을 변경하거나 설치하기 위해 필요한 권한을 얻을 수 있습니다.

@@ -36,26 +36,26 @@ passwd: jetson
     
 ### 1.2 Cooling Fan
 
-    cd Downloads
-    git clone https://github.com/jetsonworld/jetson-fan-ctl.git
-    cd jetson-fan-ctl
+    $ cd Downloads
+    $ git clone https://github.com/jetsonworld/jetson-fan-ctl.git
+    $ cd jetson-fan-ctl
     
-    sudo sh install.sh
+    $ sudo sh install.sh
     
 ### 1.4  jtop 사용
 
-    jtop
+    $ jtop
 
 ## 2. ROS Melodic 설치
 
 ### 2.1 ROS Melodic 설치
 
-    cd ~/Downloads/
-    sudo apt update
+    $ cd ~/Downloads/
+    $ sudo apt update
     
-    git clone https://github.com/zeta0707/installROS.git
-    cd installROS
-    ./install-ros.sh
+    $ git clone https://github.com/zeta0707/installROS.git
+    $ cd installROS
+    $ ./install-ros.sh
 
 ### 2.2 .bashrc 수정
 
@@ -92,3 +92,37 @@ passwd: jetson
     jetson@jp4512G:~/catkin_ws$ rosrun turtlesim turtle_teleop_key
 
 ![Screenshot from 2023-11-01 18-40-55](https://github.com/kai-hun/cluster/assets/68891654/ae466a24-09a4-448e-9109-f0844c5deea3)
+
+# 3장, install jessicar code
+
+## 1. jessicar install on Jetson
+
+    $ cd ~/catkin_ws/src
+    $ git clone https://github.com/zeta0707/jessicar.git
+    $ cd ~/catkin_ws
+
+ 앞 장에서 사용한 이미지는 opencv 3.4.6이 /usr/local에 설되었으므로 아래 patch를 실행해 cv_bridge가 빌드되게 만들어주세요.
+
+    $ cd ~/Downloads/opencvDownTo34
+    $ sudo patch -p1 /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake -p1 < cv_brige.patch
+    $ cd ~/catkin_ws
+    
+    #전체 빌드
+    cma
+
+ RCcar에 맞는 환경파일 만들기 위해 아래 절차를 수행해주세요.
+
+    $ cd ~/catkin_ws/src/jessicar/script
+    $ ./jetRccarParam.sh pca9685Steer
+
+## 2. jessicar install on PC
+ ...
+
+## 3. other ROS package on Jetson
+    $ sudo apt update
+    $ sudo apt install ros-melodic-joy* \
+    ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard \
+    python-smbus ros-melodic-ackermann-msgs ros-melodic-web-video-server \
+    ros-melodic-image-pipeline python-pip
+    
+    $ pip2 install Adafruit_PCA9685

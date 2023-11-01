@@ -108,7 +108,7 @@ passwd: jetson
     $ cd ~/catkin_ws
     
     #전체 빌드
-    cma
+    $ cma
 
  RCcar에 맞는 환경파일 만들기 위해 아래 절차를 수행해주세요.
 

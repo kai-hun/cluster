@@ -196,7 +196,9 @@ passwd: jetson
     $ rqt_image_view
 
 ### 파라미터 조정
+
  find_ball.yaml파일에서 필터 색을 정할 수 있습니다.
+ 
  motor.yaml파일에서 모터 파라미터를 조정할 수 있습니다.
 
 # 8장, Yolo4-tiny, darknet_ros

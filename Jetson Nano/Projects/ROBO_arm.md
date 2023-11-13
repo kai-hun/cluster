@@ -77,3 +77,74 @@ rosrun으로 joy_control.py 실행했으므로, joy_teleop_axes.launch를 따로
 
     #terminal #3
     jetson@jp4612GCv346Py37:~$ roslaunch jessiarm_joy joy_teleop_axes.launch
+
+# 6장, Teleop by keyboard
+
+### **1. teleop_twist_keyboard 설치**
+
+        jetson@jp4612GCv346Py37:~/catkin_ws$ git clone https://github.com/ros-teleop/teleop_twist_keyboard.git
+        jetson@jp4612GCv346Py37:~/catkin_ws$ cd ..
+        jetson@jp4612GCv346Py37:~/catkin_ws$ cma
+
+### **2. launch파일로 실행**
+
+        $ roslaunch jessiarm_control teleop_keyboard.launch
+
+### **3. rosrun으로 각각 파이썬 코드 실행**
+
+ 먼저 roscore를 실행합니다. 그 후 젯슨 다른 터미널에서 아래 명령어를 실행합니다.
+
+        #terminal #1
+        jetson@jp4612GCv346Py37:~$  roscore
+        
+        #terminal #2
+        jetson@jp4612GCv346Py37:~$  rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+        
+        #terminal #3
+        jetson@jp4612GCv346Py37:~$  rosrun jessiarm_control keyboard_control.py
+
+# 7장, Verify USB camera
+
+### **1. Jetson에서 카메라 동작 확인**
+
+        jetson@jp4612GCv346Py37:~$ ls /dev/video*
+        /dev/video0
+        jetson@jp4612GCv346Py37:~$ nvgstcapture-1.0 --camsrc=0 --cap-dev-node=/dev/video0
+
+## **2. PC/jetson에서 ROS webcam으로 이미지 확인**
+
+        jetson@jp4612GCv346Py37:~$ sudo apt install ros-melodic-image-view
+
+### 2.1 Jetson만 사용할 경우
+
+        $ roscore 
+        $ rosrun jessiarm_csicamera webcam_pub.py
+        $ rosrun image_view image_view image:=/webcam_image
+
+### 2.2 PC에서 영상을 확인할 경우
+
+**Jetson:**
+
+~/.bashrc에 아래 환경변수 추가
+
+export ROS_MASTER_URI=http://192.168.55.1:11311
+
+export ROS_IP=192.168.55.1
+​
+그 후 아래 명령을 실행해 webcam image를 publish합니다.
+
+        # 터미널 #1
+        $ roscore 
+        
+        # 터미널 #2
+        $ rosrun jessiarm_csicamera webcam_pub.py
+
+**PC:**
+
+~/.bashrc에 아래 환경변수 추가
+
+export ROS_MASTER_URI=http://192.168.55.1:11311
+
+export ROS_IP=192.168.55.100
+
+        $ rqt_image_view

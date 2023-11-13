@@ -26,7 +26,7 @@ passwd: jetson
     
     $ sudo sh install.sh
     
-### 1.4  jtop 사용
+### 1.3  jtop 사용
 
     $ jtop
 

@@ -1,3 +1,5 @@
+원문 : *https://zeta7.notion.site/zeta7/JessiArm-be431f54912b472fb7f8977e5499612d*
+
 # 3장, Install jessiarm code
 
 ### 1. **jessiarm install on Jetson**

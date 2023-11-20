@@ -1,17 +1,4 @@
-![image](https://github.com/kai-hun/cluster/assets/68891654/4f516c06-9e7b-4112-912b-7dcbf267ba7a)
-
-![image](https://github.com/kai-hun/cluster/assets/68891654/dd8412f4-1013-40cf-843a-61a64c2e581c)
-
-
-`sudo sh install.sh`는 Linux 또는 Unix 기반 시스템에서 사용되는 명령어입니다. 이 명령어는 다음과 같은 역할을 합니다:
-
-1. `sudo`: "superuser do"의 약자로, 슈퍼 유저 또는 관리자 권한으로 명령을 실행하도록 허용합니다. 일반 사용자가 시스템의 중요한 부분을 변경하거나 설치하기 위해 필요한 권한을 얻을 수 있습니다.
-
-2. `sh`: Bourne 쉘 (Bourne Shell) 또는 호환 쉘 스크립트를 실행하는 명령어입니다. `install.sh` 파일은 일반적으로 쉘 스크립트 파일로, 시스템에 어떤 소프트웨어나 패키지를 설치하는 스크립트일 수 있습니다.
-
-3. `install.sh`: 이는 실행하려는 쉘 스크립트 파일의 이름이며, 스크립트에는 설치 프로세스 및 다른 작업에 필요한 명령어가 포함될 것입니다.
-
-따라서 `sudo sh install.sh` 명령어는 `install.sh`라는 스크립트를 슈퍼 유저 권한으로 실행하여 시스템에 어떤 소프트웨어나 패키지를 설치하려는 것으로 추정됩니다. 스크립트 내용과 설치할 내용에 따라 작동 방식이 다를 것이며, 실제 설치 프로세스 및 스크립트 내용은 `install.sh` 파일의 내용에 따라 다를 것입니다.
+원문 : *https://www.notion.so/zeta7/JessiCar-1449b3fd5c984bab816920cb2b92002d*
 
 # 3장, install jessicar code
 
